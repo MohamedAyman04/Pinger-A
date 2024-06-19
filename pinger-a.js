@@ -29,7 +29,7 @@ const startPingingServers = () => {
       statusElementId: "status-gpa",
     },
     {
-      url: "https://example.com/pinger-b.html",
+      url: "https://pinger-b.onrender.com/",
       statusElementId: "status-pinger-b",
     }, // Replace with the actual URL of Pinger B
   ];
