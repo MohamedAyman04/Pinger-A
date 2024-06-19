@@ -1,15 +1,9 @@
 const keepServerAlive = (url, statusElementId) => {
-  fetch(url)
+  fetch(url, { mode: "no-cors" })
     .then((response) => {
-      if (response.ok) {
-        document.getElementById(
-          statusElementId
-        ).innerText = `${url} is alive. Last check: ${new Date().toLocaleTimeString()}`;
-      } else {
-        document.getElementById(
-          statusElementId
-        ).innerText = `Failed to contact ${url}. Last attempt: ${new Date().toLocaleTimeString()}`;
-      }
+      document.getElementById(
+        statusElementId
+      ).innerText = `Contacted ${url}. Last attempt: ${new Date().toLocaleTimeString()}`;
     })
     .catch((error) => {
       document.getElementById(
